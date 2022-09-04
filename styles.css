@@ -10,14 +10,6 @@ body{
     margin: 0;
     padding: 0;
 }
-.wrapper{
-    display: flex;
-    flex-wrap: wrap;
-    place-content: center;
-    height: 100vh;
-    width: 100vw;
-    background-color: #100415;
-}
 .background{
     background-image: url(./img/background.png);
     background-repeat: repeat;
@@ -27,9 +19,24 @@ body{
     width: 100vw;
     position: absolute;
     inset: 0;
-    z-index: 0;
+    pointer-events: none;    
+    z-index: 1;
 }
-.ticket {
+.container{
+    background-color: #100415;
+    display: flex;
+    flex-wrap: wrap;
+    place-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+.wrapper{
+    perspective: 1000px;
+    /* transform-style: preserve-3d; */
+    z-index: 1;
+    pointer-events: none;
+}
+.ticket {    
     aspect-ratio: 21/9;
     background: var(--theme-color);
     border: 2px solid var(--details-color-lighten);
@@ -40,8 +47,10 @@ body{
     position: relative;
     padding: 1.75%;
     width: 800px;
-    z-index: 1;
+    
+    z-index: 2;
 }
+
 .ticket_inner {
     border: 4px solid #42b883bb;
     border-radius: 8px;
@@ -84,6 +93,9 @@ body{
 }
 .ticket-number img {
     margin-right: 30px;
+}
+.ticket-number p {
+    text-shadow: 2px 2px 1px black;
 }
 
 /* user box */
