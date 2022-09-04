@@ -31,7 +31,7 @@ body{
     width: 100vw;
 }
 .wrapper{
-    perspective: 1000px;
+    perspective: 2000px;
     /* transform-style: preserve-3d; */
     z-index: 1;
     pointer-events: none;
