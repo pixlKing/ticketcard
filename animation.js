@@ -1,19 +1,9 @@
-const $ = selector => document.querySelector(selector)
+const wrapper = document.querySelector('.container');
+const ticket = document.querySelector('.ticket');
 
-const container = $('body')
-const wrapper = $('.wrapper')
-const ticket = $('.ticket')
+wrapper.addEventListener('mousemove', event =>{
+    let xAxis = (event.pageX - window.innerWidth / 2) / 50;
+    let yAxis = (window.innerHeight / 2 - event.pageY) / 50;
 
-const { width, height } = document.querySelector(".wrapper").getBoundingClientRect()
-
-const halfWidth  = width / 2
-const halfHeight = height / 2
-
-container.addEventListener('mousemove', event =>{
-    const {offsetX, offsetY} = event
-
-    const rotationX  = ((offsetX - halfWidth) / halfWidth) * 8
-    const rotationY = ((offsetY - halfHeight) / halfHeight) * 8
-
-    ticket.style.transform = `rotateX(${rotationX}deg) rotateY(${rotationY}deg)`
+    ticket.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
 })
