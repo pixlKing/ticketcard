@@ -102,6 +102,8 @@ body{
 .user-box{
     display: grid;
     grid-template-columns: repeat(3, auto);
+    scale: 0.9;
+    transform: perspective(500px) translateZ(50px);
 }    
 .github-logo{
     border-radius: 100px;
@@ -151,6 +153,8 @@ body{
     font-size: 66px;
     line-height: 66px;
     letter-spacing: -1px;
+    scale: 0.9;
+    transform: perspective(500px) translateZ(50px);
 }
 .vite-data h3{
     color: #e3e3e3;
