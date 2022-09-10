@@ -1,12 +1,5 @@
-/* Vars */
-body {
-  /* --theme-color: #42b88333; */
-  --theme-color: #3307e51f;
-  --details-color: #42b8831f;
-  --details-color-lighten: #42b88333;
-}
-
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -41,9 +34,9 @@ body {
 }
 
 .ticket {
-  aspect-ratio: 21/9;
-  background: var(--theme-color);
-  border: 2px solid var(--details-color-lighten);
+  aspect-ratio: 21/10;
+  background: rgba(51, 7, 229, 0.1215686275);
+  border: 2px solid rgba(66, 184, 131, 0.2);
   border-radius: 10px;
   color: #e3e3e3;
   display: flex;
@@ -52,6 +45,54 @@ body {
   padding: 1.75%;
   width: 800px;
   z-index: 2;
+}
+.ticket_hole {
+  background: url(../img/background.png) center center;
+  border: 2px solid rgba(99, 221, 180, 0.5098039216);
+  border-radius: 5px;
+  content: "";
+  left: calc(50% - 40px);
+  top: 34px;
+  position: absolute;
+  height: 12px;
+  width: 80px;
+  z-index: 1;
+}
+@media (max-width: 800px) {
+  .ticket_hole {
+    border-top-color: rgba(53, 135, 107, 0.6705882353);
+    border-left-color: rgba(53, 135, 107, 0.6705882353);
+    border-right-color: rgba(30, 98, 75, 0.6901960784);
+    border-bottom-color: rgba(24, 56, 45, 0.7803921569);
+  }
+}
+@media (min-width: 800px) {
+  .ticket_hole {
+    border-top-color: rgba(102, 51, 183, 0.6705882353);
+    border-left-color: rgba(102, 51, 183, 0.6705882353);
+    border-right-color: rgba(102, 51, 183, 0.4196078431);
+    border-bottom-color: rgba(102, 51, 183, 0.4196078431);
+  }
+}
+.ticket_hole::before {
+  background: rgba(60, 60, 60, 0.58);
+  box-shadow: -1px -1px 0px 0px rgba(255, 255, 255, 0.2);
+  content: "";
+  position: absolute;
+  width: 92%;
+  height: 340px;
+  bottom: 45px;
+  transform: skew(25deg) translateX(-125%);
+}
+.ticket_hole::after {
+  background: rgba(60, 60, 60, 0.58);
+  box-shadow: -1px -1px 0px 0px rgba(255, 255, 255, 0.2);
+  content: "";
+  position: absolute;
+  width: 92%;
+  height: 340px;
+  bottom: 5px;
+  transform: skew(-25deg) translateX(117%);
 }
 
 .ticket_inner {
@@ -169,7 +210,7 @@ body {
   -webkit-text-fill-color: transparent;
   color: #e3e3e3;
   font-size: 66px;
-  line-height: 66px;
+  line-height: 1;
   letter-spacing: -1px;
   scale: 0.9;
   transform: perspective(500px) translateZ(50px);
@@ -216,4 +257,51 @@ body {
 }
 .vite-footer .vite-footer_host img {
   display: flex;
+}
+
+@media (max-width: 800px) {
+  .wrapper {
+    pointer-events: all;
+  }
+  .ticket {
+    aspect-ratio: 4/7;
+    width: 320px;
+  }
+  .ticket-header .ticket-number {
+    font-size: 18px;
+    place-content: center space-between;
+    width: 100%;
+  }
+  .ticket-header .ticket-number::before {
+    display: none;
+  }
+  .ticket-header .user-box {
+    margin-top: 70px;
+  }
+  .ticket-header .user-box .github-name {
+    font-size: 20px;
+  }
+  .ticket-body {
+    display: flex;
+    flex-flow: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  .ticket-body .vite-logo {
+    margin: 0;
+    max-width: 160px;
+  }
+  .ticket-body .vite-data {
+    margin: 0 0 20px;
+  }
+  .ticket-body .vite-data h2 {
+    font-size: 40px;
+  }
+  .ticket-body .vite-data h3 {
+    font-size: 22px;
+  }
+  .ticket-body .vite-footer {
+    font-size: 15px;
+  }
 }
