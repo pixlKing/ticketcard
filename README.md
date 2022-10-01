@@ -1,7 +1,9 @@
 # Ticket ViteConf 2022
-Traté de simular un ticket de entrada a la viteConf 2022
+## Traté de simular un ticket de entrada a la viteConf 2022
 
-Lo hice solamente con html, css y javascript con unos efectos 3D con el movimiento del mouse darle mas realismo !
+Lo hice con html, css y javascript que le dan un efecto 3D cuando movés el mouse, para darle mas realismo.
+<br>
+Entrá, mové el mouse por la pantalla y fijate que pasa!
 <br>
 <br>
 
