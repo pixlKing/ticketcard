@@ -7,8 +7,7 @@ Entrá, mové el mouse por la pantalla y fijate que pasa!
 <br>
 <br>
 
-<img src="./img/ticketcard-preview1.jpg" alt="Ticketcard imagen preview" width="300px" />
-<img src="./img/ticketcard-preview2.jpg" alt="Ticketcard imagen preview" width="300px" />
+<img src="./img/ticketcard-preview1.jpg" alt="Ticketcard imagen preview" width="300px" /><img src="./img/ticketcard-preview2.jpg" alt="Ticketcard imagen preview" width="300px" />
 <br>
 <img src="./img/ticketcard-preview3.jpg" alt="Ticketcard imagen preview" width="300px" />
 
