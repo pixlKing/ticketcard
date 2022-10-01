@@ -30,7 +30,6 @@
   perspective: 2000px;
   /* transform-style: preserve-3d; */
   z-index: 1;
-  pointer-events: none;
 }
 
 .ticket {
